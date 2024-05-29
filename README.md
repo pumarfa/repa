@@ -11,3 +11,13 @@ El proyecto pretende llevar un registro y/o catálogo de las personas en el terr
 * Registrar los programas y proyectos desarrollados por los individuos, como por las empresas..
 * Llevar un registro de las empresas inscriptas en el Registro de Empresas de Producción Audiovisual (REPA).
 
+## Referencias de Herramientas
+
+* Usando diferentes métodos de HTTP con curl
+  -> https://terminalcheatsheet.com/es/guides/curl-rest-api
+
+* Sintaxis básica del comando cURL
+  -> https://www.hostinger.com.ar/tutoriales/comando-curl
+
+Ambas referencias son sobre el uso del comando " cURL " para las pruebas unitarias de REST-json de las API.
+

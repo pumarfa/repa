@@ -1,7 +1,7 @@
 {
-  "name": "myproyect-test",
+  "name": "usr-acl",
   "version": "1.0.0",
-  "description": "Proyecto de base para desarrollo de una APP",
+  "description": "CRUD de usuarios y autenticación",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -22,11 +22,16 @@
   "homepage": "https://github.com/pumarfa/repa#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "body-parser":"^1.20.2",
     "mongoose": "^6.7.2",
     "zod": "^3.23",
     "cors": "^2.8.5",
+    "bcrypt":"^5.1.1",
+    "jsonwebtoken":"^9.0.2"
+  },
+  "devDependencies" : {
+    "ejs": "^3.1.8",
     "nodemon":"^3.1.0"
   }
 }

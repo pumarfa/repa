@@ -1,0 +1,49 @@
+### Recuperar todas los usuarios
+GET http://localhost:3000/api/users
+curl -v http://localhost:3000/api/users | jq
+
+### Recuperar una usuario por id
+GET http://localhost:3000/api/users/6651bedc674c66d5511d887a
+curl -v http://localhost:3000/api/users/$id | jq
+
+### Crear un Usuario con POST
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "Pumarfa",
+  "email": "pumarfa@gmail.com",
+  "password": "Password",
+  "pwd" : "Password"
+}
+curl -v -X POST -H 'Content-Type: application/json' -d '{ "name": "Pablo", "email": "pablo@gmail.com", "password": "Password", "pwd" : "Password" }'  http://localhost:3000/api/users | jq
+
+### Actualizar un usuario
+PUT http://localhost:3000/api/users/66526c96ddcc58ed5f93ad7a
+Content-Type: application/json
+
+{
+  "name": "Marcelo",
+  "email": "pumarfa12@hotmail.com",
+  "password": "Password"
+}
+curl -v -X PUT -H 'Content-Type: application/json' -d '{ "name": "Pablo", "email": "pablo@gmail.com", "password": "Password", "pwd" : "Password" }'  http://localhost:3000/api/users/$id | jq
+
+### Login usuario y password
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "name": "Marcelo",
+  "password": "Password",
+  "email": "pumarfa@gmail.com"
+}
+curl -v -X POST -H 'Content-Type: application/json' -d '{ "name": "Pablo", "email": "pablo@gmail.com", "password": "Password" }'  http://localhost:3000/api/login | jq
+
+### Recuperar todos los usuarios por rol
+GET http://localhost:3000/api/users?role=admin
+
+### Borrar un usuario
+DELETE http://localhost:3000/api/users/64d4d8825d614a4ec5984ae3
+
+curl -v -X DELETE  http://localhost:3000/api/users/$id | jq

@@ -14,9 +14,10 @@ Content-Type: application/json
   "name": "Pumarfa",
   "email": "pumarfa@gmail.com",
   "password": "Password",
-  "pwd" : "Password"
+  "pwd" : "Password",
+  "roles":{ "rol": "readWrite", "module":"user" }
 }
-curl -v -X POST -H 'Content-Type: application/json' -d '{ "name": "Pablo", "email": "pablo@gmail.com", "password": "Password", "pwd" : "Password" }'  http://localhost:3000/api/users | jq
+curl -v -X POST -H 'Content-Type: application/json' -d '{ "name": "Pablo", "email": "pablo@gmail.com", "password": "Password", "pwd" : "Password", "roles": { "rol": "readWrite", "module":"user" }}'  http://localhost:3000/api/users | jq
 
 ### Actualizar un usuario
 PUT http://localhost:3000/api/users/66526c96ddcc58ed5f93ad7a
